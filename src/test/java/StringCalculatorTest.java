@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorTest {
@@ -15,5 +14,8 @@ class StringCalculatorTest {
 
         //Step 2
         assertEquals(15, calc.Add("1,2,3,4,5"));
+
+        //Step 3
+        assertEquals(6, calc.Add("1\n2,3"));
     }
 }
