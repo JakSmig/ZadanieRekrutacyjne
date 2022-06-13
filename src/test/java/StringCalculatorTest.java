@@ -17,5 +17,9 @@ class StringCalculatorTest {
 
         //Step 3
         assertEquals(6, calc.Add("1\n2,3"));
+
+        //Step4
+        assertEquals(3, calc.Add("//;\n1;2"));
+        assertEquals(10, calc.Add("//multiCharacter\n1\n3multiCharacter2\n4"));
     }
 }
