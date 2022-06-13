@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class StringCalculator {
@@ -17,9 +18,17 @@ public class StringCalculator {
 
         String[] splits = numbers.split(delimiter);
         int result = 0;
+        ArrayList<String> negatives = new ArrayList<>();
 
         for(String elem : splits){
+            if(Integer.parseInt(elem)<0)
+                negatives.add(elem);
+
             result += Integer.parseInt(elem);
+        }
+        if(!negatives.isEmpty()){
+            String msg = "negatives not allowed " + String.join(" ", negatives);
+            throw new ArithmeticException(msg);
         }
 
         return result;
