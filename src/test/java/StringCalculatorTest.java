@@ -26,5 +26,7 @@ class StringCalculatorTest {
         String actualMessage = exception.getMessage();
         assertTrue(actualMessage.contains("negatives not allowed -2"));
 
+        //Step 6
+        assertEquals(2, calc.Add("2,1001"));
     }
 }

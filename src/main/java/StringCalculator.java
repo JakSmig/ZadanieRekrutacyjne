@@ -23,8 +23,8 @@ public class StringCalculator {
         for(String elem : splits){
             if(Integer.parseInt(elem)<0)
                 negatives.add(elem);
-
-            result += Integer.parseInt(elem);
+            if(Integer.parseInt(elem)<1001)
+                result += Integer.parseInt(elem);
         }
         if(!negatives.isEmpty()){
             String msg = "negatives not allowed " + String.join(" ", negatives);
